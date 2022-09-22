@@ -1,0 +1,39 @@
+form {
+    height: 60vh;
+    width: 30vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    padding: 5px;
+
+    h1 {
+        text-align: center;
+        color: wheat;
+        font-family: "Roboto";
+    }
+
+    .content-form{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .input-email,.input-password {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            label {
+                color: wheat;
+            }
+
+            input {
+                outline: none;
+                background: none;
+                border: none;
+                border-bottom: 1px solid black;
+                color: white;
+            }
+        }
+    }
+}
