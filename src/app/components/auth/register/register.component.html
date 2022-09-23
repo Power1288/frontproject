@@ -17,6 +17,7 @@
             <input type="password" id="password" [formControl]="password">
             <p class="error" *ngIf="password.invalid && password.dirty">{{getPasswordErrorMessage()}}</p>
         </div>
+      <p class="error" *ngIf="formError">{{formError}}</p>
         <div class="input-submit">
           <button type="submit" [disabled]="!formRegister.valid" (click)="handleRegister()">S'inscrire</button>
         </div>

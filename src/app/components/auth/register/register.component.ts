@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import {HttpClient} from "@angular/common/http";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-register',
@@ -14,8 +15,9 @@ export class RegisterComponent implements OnInit {
   email:FormControl;
   password:FormControl;
   pseudo: FormControl;
+  formError : undefined | string;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private fb: FormBuilder, private http: HttpClient,private router : Router) {
     this.email = fb.control("",[Validators.email,Validators.required])
     this.password = fb.control("",[Validators.required,Validators.minLength(6)])
     this.pseudo = fb.control("",[Validators.required,Validators.minLength(6)])
@@ -59,7 +61,21 @@ export class RegisterComponent implements OnInit {
   }
 
   handleRegister() {
-    console.log(this.formRegister.value)
+
+    this.http.post("http://localhost:3000/auth/register",{
+      email:this.formRegister.value.email,
+      password:this.formRegister.value.password,
+      pseudo: this.formRegister.value.pseudo
+    }).subscribe({
+      next: (data) => {
+        console.log(data)
+        this.router.navigate(["login"])
+      },
+      error:(err) => {
+        console.log(err.error)
+        this.formError = err.error
+      }
+    })
   }
 
 }

@@ -53,6 +53,10 @@ form {
           &:hover {
             transform: scale(1.02);
           }
+          &:disabled {
+            background: rgba(0, 0, 0, 0.57);
+            cursor: not-allowed;
+          }
         }
       }
     }
