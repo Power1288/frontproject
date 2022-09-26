@@ -68,11 +68,9 @@ export class RegisterComponent implements OnInit {
       pseudo: this.formRegister.value.pseudo
     }).subscribe({
       next: (data) => {
-        console.log(data)
         this.router.navigate(["login"])
       },
       error:(err) => {
-        console.log(err.error)
         this.formError = err.error
       }
     })

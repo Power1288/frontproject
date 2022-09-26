@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
+import { ResetComponent } from './components/auth/reset/reset.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {HttpClientModule} from "@angular/common/http";
     HeaderComponent,
     LoginComponent,
     RegisterComponent,
+    ResetComponent,
   ],
   imports: [
     BrowserModule,

@@ -38,6 +38,10 @@ form {
                 border: none;
                 border-bottom: 1px solid black;
                 color: white;
+                padding: 5px;
+              &:focus {
+                border-bottom: 1px solid wheat;
+              }
             }
         }
       .input-submit {

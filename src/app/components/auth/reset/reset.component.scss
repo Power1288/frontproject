@@ -1,5 +1,5 @@
 form {
-  height: 50vh;
+  height: 20vh;
   width: 30vw;
   position: absolute;
   top: 50%;
@@ -8,22 +8,17 @@ form {
   border-radius: 5px;
   padding: 5px;
 
-  p {
-    color: wheat;
-    font-family: Roboto;
-  }
-
   h1 {
     text-align: center;
     color: wheat;
     font-family: "Roboto";
   }
 
-  .content-form{
+  .content-form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    .input-email,.input-password {
+    .input-email {
       display: flex;
       flex-direction: column;
       gap: 5px;
@@ -64,4 +59,5 @@ form {
       }
     }
   }
+
 }

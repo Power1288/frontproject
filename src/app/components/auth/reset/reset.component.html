@@ -1,0 +1,12 @@
+<form action="" [formGroup]="formReset">
+  <h1>Reset mot de passe</h1>
+  <div class="content-form">
+    <div class="input-email">
+      <label for="email">Votre email</label>
+      <input type="email" id="email" [formControl]="email">
+    </div>
+    <div class="input-submit">
+      <button type="submit" [disabled]="!formReset.valid">Demander un nouveau mot de passe</button>
+    </div>
+  </div>
+</form>
