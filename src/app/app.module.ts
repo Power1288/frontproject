@@ -13,6 +13,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
 import { ResetComponent } from './components/auth/reset/reset.component';
+import { HomeBookComponent } from './components/home-book/home-book.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ResetComponent } from './components/auth/reset/reset.component';
     LoginComponent,
     RegisterComponent,
     ResetComponent,
+    HomeBookComponent,
   ],
   imports: [
     BrowserModule,

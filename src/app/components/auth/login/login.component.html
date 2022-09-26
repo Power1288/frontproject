@@ -13,6 +13,8 @@
       <p class="error" *ngIf="password.invalid && password.dirty">{{getPasswordErrorMessage()}}</p>
     </div>
     <p class="error" *ngIf="formError">{{formError}}</p>
+    <p class="success" *ngIf="formSuccess">{{formSuccess}}</p>
+
     <a routerLink="/reset">Mot de passe oublié ?</a>
     <div class="input-submit">
       <button type="submit" [disabled]="!formLogin.valid" (click)="handleLogin()">Se connecter</button>

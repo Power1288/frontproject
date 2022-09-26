@@ -1,9 +1,13 @@
 <header>
     <h1>My library</h1>
     <div class="header-connect">
-        <ul>
+        <ul *ngIf="!authService.login">
             <li><a routerLink="login">Login</a></li>
             <li><a routerLink="register">Register</a></li>
+        </ul>
+        <ul *ngIf="authService.login">
+          <li><a disabled="true">{{this.authService.pseudo}}</a></li>
+          <li><a (click)="handleLogout()">Déconnexion</a></li>
         </ul>
     </div>
 </header>
