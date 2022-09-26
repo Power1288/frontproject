@@ -1,0 +1,29 @@
+.admin-content {
+  height: 70vh;
+  width: 40vw;
+  border: 1px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  display: grid;
+  grid-template-columns: 25% 75%;
+
+  .left-part-admin {
+    border-right: 1px solid white;
+
+    padding: 15px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      a {
+        color: white;
+        font-family: "Roboto Condensed";
+      }
+    }
+  }
+}

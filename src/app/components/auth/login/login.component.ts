@@ -63,6 +63,8 @@ export class LoginComponent implements OnInit {
         this.authService.email = data.email
         this.authService.pseudo = data.pseudo
         this.authService.token = data.token
+        this.authService.role = data.role
+
         setTimeout(() => {
           this.router.navigate([''])
         },2000)

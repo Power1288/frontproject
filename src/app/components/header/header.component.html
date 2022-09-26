@@ -6,7 +6,8 @@
             <li><a routerLink="register">Register</a></li>
         </ul>
         <ul *ngIf="authService.login">
-          <li><a disabled="true">{{this.authService.pseudo}}</a></li>
+          <li><a disabled="true">{{authService.pseudo}}</a></li>
+          <li *ngIf="authService.staff"><a routerLink="admin">admin</a></li>
           <li><a (click)="handleLogout()">Déconnexion</a></li>
         </ul>
     </div>

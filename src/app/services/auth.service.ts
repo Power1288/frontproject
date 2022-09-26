@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {UserRole} from "../enums/user-role";
 
 @Injectable({
   providedIn: 'root'
@@ -6,11 +7,12 @@ import { Injectable } from '@angular/core';
 export class AuthService {
 
 
-  private _login:boolean = false;
-  private _pseudo:string = ""
+  private _login:boolean = true;
+  private _pseudo:string = "power"
   private _email:string = ""
   private _token : string = ""
-
+  private _role : string = UserRole.admin
+  private _staff : boolean = false
   constructor() { }
 
   public get login() : boolean {
@@ -49,4 +51,28 @@ export class AuthService {
     localStorage.setItem("token",token)
     this._token = token
   }
+
+  public get role() : string {
+    return this._role
+  }
+
+  public set role(role : string) {
+    this._role = role
+
+    if (this._role == UserRole.admin) {
+      this.staff = true
+      console.log(this.staff)
+    }else {
+      this.staff = false
+    }
+  }
+
+  public get staff() : boolean {
+    return this._staff
+  }
+
+  public set staff(staff: boolean) {
+    this._staff = staff
+  }
+
 }

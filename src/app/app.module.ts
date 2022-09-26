@@ -14,6 +14,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
 import { ResetComponent } from './components/auth/reset/reset.component';
 import { HomeBookComponent } from './components/home-book/home-book.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { BooksComponent } from './components/admin/books/books.component';
+import { UsersComponent } from './components/admin/users/users.component';
+import { AddBookComponent } from './components/admin/add-book/add-book.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,10 @@ import { HomeBookComponent } from './components/home-book/home-book.component';
     RegisterComponent,
     ResetComponent,
     HomeBookComponent,
+    AdminComponent,
+    BooksComponent,
+    UsersComponent,
+    AddBookComponent,
   ],
   imports: [
     BrowserModule,
