@@ -1,12 +1,12 @@
 <div class="admin-content">
   <div class="left-part-admin">
     <ul>
-      <li><a><i class="fa-solid fa-user"></i> Users</a></li>
-      <li><a href=""><i class="fa-solid fa-book"></i> Books</a></li>
-      <li><a href=""><i class="fa-solid fa-plus"></i>Add a book</a></li>
+      <li><a (click)="handleNav(this.adminNav.users)"><i class="fa-solid fa-user"></i> Users</a></li>
+      <li><a (click)="handleNav(this.adminNav.books)"><i class="fa-solid fa-book"></i> Books</a></li>
+      <li><a (click)="handleNav(this.adminNav.addBook)"><i class="fa-solid fa-plus"></i>Add a book</a></li>
     </ul>
   </div>
-  <div class="right-part-admin">
-
-  </div>
+  <app-users *ngIf="currentNav == adminNav.users"></app-users>
+  <app-books *ngIf="currentNav == adminNav.books"></app-books>
+  <app-add-book *ngIf="currentNav == adminNav.addBook"></app-add-book>
 </div>

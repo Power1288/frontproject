@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AdminNav} from "../../enums/admin-nav";
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
+
+  private _adminNav = AdminNav
+
+  currentNav: string = AdminNav.users
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  handleNav(value:string) {
+    this.currentNav = value
+  }
+
+  public get adminNav() {
+    return this._adminNav
   }
 
 }

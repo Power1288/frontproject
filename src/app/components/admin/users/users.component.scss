@@ -1,0 +1,27 @@
+.admin-users-container {
+  padding: 15px;
+
+  .admin-users-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+    .admin-user-item {
+      padding: 15px;
+      background: #353b48;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 10px;
+      h2 {
+        text-align: center;
+        color: white;
+        border-bottom: 1px solid white;
+      }
+
+      p {
+        color: white;
+        text-align: center;
+      }
+    }
+  }
+}

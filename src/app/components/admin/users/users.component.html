@@ -1,1 +1,18 @@
-<p>users works!</p>
+<div class="admin-users-container">
+  <div class="admin-users-list" *ngFor="let user of usersList">
+    <div class="admin-user-item">
+      <div class="email-user">
+        <h2>Email</h2>
+        <p>{{user.email}}</p>
+      </div>
+      <div class="pseudo-user">
+        <h2>pseudo</h2>
+        <p>{{user.pseudo}}</p>
+      </div>
+      <div class="role-user">
+        <h2>roles</h2>
+        <p>{{user.role}}</p>
+      </div>
+    </div>
+  </div>
+</div>
