@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../../../environments/environment";
+import {AuthService} from "../../../services/auth.service";
 
 @Component({
   selector: 'app-users',
@@ -11,7 +12,7 @@ export class UsersComponent implements OnInit {
 
   usersList : any = []
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,private authService: AuthService) {
   }
 
   ngOnInit(): void {
@@ -25,5 +26,21 @@ export class UsersComponent implements OnInit {
       }
     })
   }
+
+  handleDelete(userId:string) {
+    const token = this.authService.token
+    this.http.delete(`${environment.apiUrl}/users/${userId}`,{
+      body: {token}
+    }).subscribe({
+      next:(data) => {
+        console.log(data)
+        this.usersList = this.usersList.filter((user:any) => user.id !== userId)
+      },
+      error:(err:any) => {
+        console.log(err)
+      }
+    })
+  }
+
 
 }

@@ -10,17 +10,24 @@
       padding: 15px;
       background: #353b48;
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(2,1fr);
       gap: 10px;
-      h2 {
-        text-align: center;
-        color: white;
-        border-bottom: 1px solid white;
-      }
 
       p {
         color: white;
         text-align: center;
+        font-family: Roboto;
+      }
+
+      .action-user {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        i {
+          color: white;
+          cursor: pointer;
+        }
       }
     }
   }

@@ -11,7 +11,7 @@ export class AdminComponent implements OnInit {
 
   private _adminNav = AdminNav
 
-  currentNav: string = AdminNav.users
+  currentNav: string = AdminNav.addBook
 
   constructor() { }
 

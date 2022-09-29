@@ -1,1 +1,36 @@
-<p>add-book works!</p>
+<div class="admin-add-book-container">
+  <h1>Crée un livre</h1>
+
+  <form action="" [formGroup]="formBook">
+    <div class="input-name-book">
+      <label for="titleOfBook">Titre du livre</label>
+      <input type="text" id="titleOfBook" [formControl]="bookName">
+    </div>
+
+    <div class="input-author-book">
+      <label for="authorForBook">Autheur du livre</label>
+      <input type="text" id="authorForBook" [formControl]="bookAuthor">
+    </div>
+
+    <div class="input-qtty-book">
+      <label for="qttyForBook">Nombre de livre</label>
+      <input type="number" id="qttyForBook" placeholder="1" [formControl]="bookQtty">
+    </div>
+
+    <div class="input-price-book">
+      <label for="priceForBook">prix du livre</label>
+      <input type="number" id="priceForBook" placeholder="1" [formControl]="bookPrice">
+    </div>
+
+    <div class="input-cover-book">
+      <label for="coverForBook">Couverture du livre</label>
+      <input type="file" id="coverForBook" accept="image/png, image/jpeg, image/jpg" [formControl]="bookCover">
+    </div>
+
+    <div class="input-submit-book">
+      <button>Ajouter le livre</button>
+    </div>
+
+  </form>
+
+</div>

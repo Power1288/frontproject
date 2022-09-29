@@ -2,16 +2,12 @@
   <div class="admin-users-list" *ngFor="let user of usersList">
     <div class="admin-user-item">
       <div class="email-user">
-        <h2>Email</h2>
-        <p>{{user.email}}</p>
+        <p [ngStyle]="{'color':user.role == 'admin' ? '#e67e22' : ''}">{{user.email}}</p>
       </div>
-      <div class="pseudo-user">
-        <h2>pseudo</h2>
-        <p>{{user.pseudo}}</p>
-      </div>
-      <div class="role-user">
-        <h2>roles</h2>
-        <p>{{user.role}}</p>
+      <div class="action-user">
+        <i class="fa-solid fa-user-pen"></i>
+        <i class="fa-solid fa-eye"></i>
+        <i class="fa-solid fa-trash" (click)="handleDelete(user.id)"></i>
       </div>
     </div>
   </div>

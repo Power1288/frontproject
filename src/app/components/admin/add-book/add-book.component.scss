@@ -1,0 +1,59 @@
+.admin-add-book-container {
+  padding: 15px;
+  height: 100%;
+
+  h1 {
+    color: white;
+    font-family: Roboto;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .input-name-book,.input-author-book,.input-qtty-book,.input-price-book,.input-cover-book {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+
+      label {
+        color: wheat;
+      }
+
+      input {
+        outline: none;
+        background: none;
+        border: none;
+        border-bottom: 1px solid black;
+        color: white;
+        padding: 5px;
+        &:focus {
+          border-bottom: 1px solid wheat;
+        }
+      }
+    }
+    .input-submit-book {
+      height: 120%;
+      button {
+        width: 100%;
+        background: black;
+        border: none;
+        color: white;
+        height: 40px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.02);
+        }
+        &:disabled {
+          background: rgba(0, 0, 0, 0.57);
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}
