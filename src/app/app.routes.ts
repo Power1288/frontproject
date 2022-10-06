@@ -6,11 +6,13 @@ import {HomeBookComponent} from "./components/home-book/home-book.component";
 import {AuthGuard} from "./guard/auth.guard";
 import {AdminComponent} from "./components/admin/admin.component";
 import {AdminGuard} from "./guard/admin.guard";
+import {ViewComponent} from "./components/admin/users/view/view.component";
 
 export const ROUTES : Routes = [
     {path:"",component:HomeBookComponent,canActivate:[AuthGuard]},
     {path:"login",component:LoginComponent},
     {path:"register",component:RegisterComponent},
     {path:"reset",component:ResetComponent},
-    {path:"admin",component:AdminComponent,canActivate:[AdminGuard]}
+    {path:"admin",component:AdminComponent,canActivate:[AdminGuard]},
+    {path:'admin/view/:id',component:ViewComponent,canActivate:[AdminGuard]}
 ]

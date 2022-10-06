@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../../../environments/environment";
 import {AuthService} from "../../../services/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-users',
@@ -12,7 +13,7 @@ export class UsersComponent implements OnInit {
 
   usersList : any = []
 
-  constructor(private http: HttpClient,private authService: AuthService) {
+  constructor(private http: HttpClient,private authService: AuthService,private router:Router) {
   }
 
   ngOnInit(): void {
@@ -40,6 +41,10 @@ export class UsersComponent implements OnInit {
         console.log(err)
       }
     })
+  }
+
+  handleView(userId: string) {
+    this.router.navigate(['admin/view',userId])
   }
 
 

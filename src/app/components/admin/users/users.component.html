@@ -5,8 +5,7 @@
         <p [ngStyle]="{'color':user.role == 'admin' ? '#e67e22' : ''}">{{user.email}}</p>
       </div>
       <div class="action-user">
-        <i class="fa-solid fa-user-pen"></i>
-        <i class="fa-solid fa-eye"></i>
+        <i class="fa-solid fa-eye" (click)="handleView(user.id)"></i>
         <i class="fa-solid fa-trash" (click)="handleDelete(user.id)"></i>
       </div>
     </div>

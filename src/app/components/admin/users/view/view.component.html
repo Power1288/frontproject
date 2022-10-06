@@ -1,0 +1,24 @@
+<div class="admin-user-view-container">
+    <div class="admin-view-user-details">
+      <h1 class="detail">
+        <h2>User : {{userData?._id}}</h2>
+      </h1>
+      <div class="pseudo-detail detail">
+        <h2>Pseudo : {{userData?.pseudo}}</h2>
+      </div>
+      <div class="email-detail detail">
+        <p>Email : {{userData?.email}}</p>
+      </div>
+      <div class="role-detail detail">
+        <p>Role : {{userData?.role}}</p>
+      </div>
+
+
+      <div class="user-view-btn-role">
+        <button *ngIf="userData?.role == roles.user" (click)="handleUpGrade(userData?._id)">Monter de grade <i class="fa-solid fa-chevron-up"></i></button>
+        <button *ngIf="userData?.role == roles.admin" (click)="handleDownGrade(userData?._id)">Descendre de grade <i class="fa-solid fa-chevron-down"></i></button>
+
+      </div>
+      <button class="btn-back" (click)="handleBack()"><i class="fa-solid fa-left-long"></i>Go back</button>
+    </div>
+</div>
