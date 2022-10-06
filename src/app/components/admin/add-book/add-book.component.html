@@ -1,7 +1,7 @@
 <div class="admin-add-book-container">
   <h1>Crée un livre</h1>
 
-  <form action="" [formGroup]="formBook">
+  <form action="" [formGroup]="formBook" enctype="multipart/form-data">
     <div class="input-name-book">
       <label for="titleOfBook">Titre du livre</label>
       <input type="text" id="titleOfBook" [formControl]="bookName">
